@@ -1,4 +1,4 @@
-package src.com.apress.projsp;
+package com.apress.projsp;
 
 import java.util.Calendar;
 import java.util.Date;
