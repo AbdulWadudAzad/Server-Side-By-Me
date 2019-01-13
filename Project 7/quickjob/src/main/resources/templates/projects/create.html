@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{layout2.html}">
+
+<head>
+    <title>Address</title>
+</head>
+<body>
+<div layout:fragment="custom-content">
+    <div class="row">
+
+
+        <div class="col-12 stretch-card">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Add Project</h4>
+
+                    <form class="forms-sample" th:object="${obj}" method="post"
+                          th:action="@{/project/create.jsf}">
+                        <div class="form-group row">
+                            <label for="projectName" class="col-sm-3 col-form-label">Project Name</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="projectName" th:field="*{projectName}"
+                                       required  placeholder="Enter Project Name">
+
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="subject" class="col-sm-3 col-form-label">Subject</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="subject" th:field="*{subject}"
+                                       required  placeholder="Enter Subject of Project">
+
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="url" class="col-sm-3 col-form-label">Project URL</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="url" th:field="*{url}"
+                                       required  placeholder="Enter Project URL">
+
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="publicationDate" class="col-sm-3 col-form-label">Publication Date</label>
+                            <div class="col-sm-9">
+                                <input type="date" class="form-control" id="publicationDate" th:field="*{publicationDate}"
+                                       required  placeholder="Enter Publication Date ">
+
+                            </div>
+                        </div>
+
+                        <button class="btn btn-success mr-2 float-right">Submit</button>
+                        <button type="submit" class="btn btn-light mr-2 float-right">Reset</button>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+
+    <body>
+
+        <nav class="sidebar sidebar-offcanvas" id="sidebar" th:fragment="side-navbar">
+            <ul class="nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="/" th:href="@{/}">
+                        <span class="menu-title">Dashboard</span>
+                        <!--<span class="menu-sub-title">( 2 new updates )</span>-->
+                        <i class="mdi mdi-home menu-icon"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="collapse" href="#bmi" aria-expanded="false" aria-controls="bmi">
+                        <span class="menu-title">Role</span>
+                        <i class="menu-arrow"></i>
+                        <i class="mdi mdi-crosshairs-gps menu-icon"></i>
+                    </a>
+                    <div class="collapse" id="bmi">
+                        <ul class="nav flex-column sub-menu">
+                            <li class="nav-item"> <a class="nav-link" th:href="@{/role/create.jsf}" href="/role/create.jsf">Create</a></li>
+                            <li class="nav-item"> <a class="nav-link" th:href="@{/role/list.jsf}" href="/role/list.jsf">List</a></li>
+
+                        </ul>
+                    </div>
+                </li>
+
+
+                <li class="nav-item">
+                <a class="nav-link" data-toggle="collapse" href="#Address" aria-expanded="false" aria-controls="Address">
+                    <span class="menu-title">Add Address</span>
+                    <i class="menu-arrow"></i>
+                    <i class="mdi mdi-crosshairs-gps menu-icon"></i>
+                </a>
+                <div class="collapse" id="Address">
+                    <ul class="nav flex-column sub-menu">
+                        <li class="nav-item"> <a class="nav-link" th:href="@{/address/create.jsf}" href="/address/create.jsf">Create</a></li>
+                        <li class="nav-item"> <a class="nav-link" th:href="@{/address/list.jsf}" href="/address/list.jsf">List</a></li>
+
+                    </ul>
+                </div>
+            </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="collapse" href="#Education" aria-expanded="false" aria-controls="Education">
+                        <span class="menu-title">Education</span>
+                        <i class="menu-arrow"></i>
+                        <i class="mdi mdi-crosshairs-gps menu-icon"></i>
+                    </a>
+                    <div class="collapse" id="Education">
+                        <ul class="nav flex-column sub-menu">
+                            <li class="nav-item"> <a class="nav-link" th:href="@{/education/create.jsf}" href="/education/create.jsf">Create</a></li>
+                            <li class="nav-item"> <a class="nav-link" th:href="@{/education/list.jsf}" href="/education/list.jsf">List</a></li>
+
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="collapse" href="#technicaltraining" aria-expanded="false" aria-controls="technicaltraining">
+                        <span class="menu-title">Technical Ttraining</span>
+                        <i class="menu-arrow"></i>
+                        <i class="mdi mdi-crosshairs-gps menu-icon"></i>
+                    </a>
+                    <div class="collapse" id="technicaltraining">
+                        <ul class="nav flex-column sub-menu">
+                            <li class="nav-item"> <a class="nav-link" th:href="@{/technical-training/create.jsf}" href="/technical-training/create.jsf">Create</a></li>
+                            <li class="nav-item"> <a class="nav-link" th:href="@{/technical-training/list.jsf}" href="/technical-training/list.jsf">List</a></li>
+
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="collapse" href="#History" aria-expanded="false" aria-controls="History">
+                        <span class="menu-title">Job History</span>
+                        <i class="menu-arrow"></i>
+                        <i class="mdi mdi-crosshairs-gps menu-icon"></i>
+                    </a>
+                    <div class="collapse" id="History">
+                        <ul class="nav flex-column sub-menu">
+                            <li class="nav-item"> <a class="nav-link" th:href="@{/job-history/create.jsf}" href="/job-history/create.jsf">Create</a></li>
+                            <li class="nav-item"> <a class="nav-link" th:href="@{/job-history/list.jsf}" href="/job-history/list.jsf">List</a></li>
+
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="collapse" href="#Project" aria-expanded="false" aria-controls="Project">
+                        <span class="menu-title">Project</span>
+                        <i class="menu-arrow"></i>
+                        <i class="mdi mdi-crosshairs-gps menu-icon"></i>
+                    </a>
+                    <div class="collapse" id="Project">
+                        <ul class="nav flex-column sub-menu">
+                            <li class="nav-item"> <a class="nav-link" th:href="@{/project/create.jsf}" href="/project/create.jsf">Create</a></li>
+                            <li class="nav-item"> <a class="nav-link" th:href="@{/project/list.jsf}" href="/project/list.jsf">List</a></li>
+
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="collapse" href="#Referance" aria-expanded="false" aria-controls="Referance">
+                        <span class="menu-title">Referance</span>
+                        <i class="menu-arrow"></i>
+                        <i class="mdi mdi-crosshairs-gps menu-icon"></i>
+                    </a>
+                    <div class="collapse" id="Referance">
+                        <ul class="nav flex-column sub-menu">
+                            <li class="nav-item"> <a class="nav-link" th:href="@{/referance/create.jsf}" href="/referance/create.jsf">Create</a></li>
+                            <li class="nav-item"> <a class="nav-link" th:href="@{/referance/list.jsf}" href="/referance/list.jsf">List</a></li>
+
+                        </ul>
+                    </div>
+                </li>
+
+
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="collapse" href="#emplyercontactperson" aria-expanded="false" aria-controls="emplyercontactperson">
+                        <span class="menu-title">Contact Person of Employer</span>
+                        <i class="menu-arrow"></i>
+                        <i class="mdi mdi-crosshairs-gps menu-icon"></i>
+                    </a>
+                    <div class="collapse" id="emplyercontactperson">
+                        <ul class="nav flex-column sub-menu">
+                            <li class="nav-item"> <a class="nav-link" th:href="@{/emplyer-contract-person/create.jsf}" href="/emplyer-contract-person/create.jsf">Create</a></li>
+                            <li class="nav-item"> <a class="nav-link" th:href="@{/emplyer-contract-person/list.jsf}" href="/emplyer-contract-person/list.jsf">List</a></li>
+
+                        </ul>
+                    </div>
+
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="collapse" href="#user" aria-expanded="false" aria-controls="user">
+                        <span class="menu-title">Create User</span>
+                        <i class="menu-arrow"></i>
+                        <i class="mdi mdi-crosshairs-gps menu-icon"></i>
+                    </a>
+                    <div class="collapse" id="user">
+                        <ul class="nav flex-column sub-menu">
+                            <li class="nav-item"> <a class="nav-link" th:href="@{/user/create.jsf}" href="/user/create.jsf">Create</a></li>
+                            <li class="nav-item"> <a class="nav-link" th:href="@{/user/list.jsf}" href="/user/list.jsf">List</a></li>
+
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="collapse" href="#jobCategory" aria-expanded="false" aria-controls="jobCategory">
+                        <span class="menu-title">Job Category</span>
+                        <i class="menu-arrow"></i>
+                        <i class="mdi mdi-crosshairs-gps menu-icon"></i>
+                    </a>
+                    <div class="collapse" id="jobCategory">
+                        <ul class="nav flex-column sub-menu">
+                            <li class="nav-item"> <a class="nav-link" th:href="@{/job-category/create.jsf}" href="/job-category/create.jsf">Create</a></li>
+                            <li class="nav-item"> <a class="nav-link" th:href="@{/job-category/list.jsf}" href="/job-category/list.jsf">List</a></li>
+
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="collapse" href="#jobpost" aria-expanded="false" aria-controls="jobpost">
+                        <span class="menu-title">Job Post</span>
+                        <i class="menu-arrow"></i>
+                        <i class="mdi mdi-crosshairs-gps menu-icon"></i>
+                    </a>
+                    <div class="collapse" id="jobpost">
+                        <ul class="nav flex-column sub-menu">
+                            <li class="nav-item"> <a class="nav-link" th:href="@{/jobpost/create.jsf}" href="/jobpost/create.jsf">Create</a></li>
+                            <li class="nav-item"> <a class="nav-link" th:href="@{/jobpost/list.jsf}" href="/jobpost/list.jsf">List</a></li>
+
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+
+        </nav>
+
+    </body>
+
+</html>

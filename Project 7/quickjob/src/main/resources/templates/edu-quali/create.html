@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{layout2.html}">
+
+<head>
+    <title>Educational Qualification</title>
+</head>
+<body>
+<div layout:fragment="custom-content">
+    <div class="row">
+
+
+        <div class="col-12 stretch-card">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Add Educational Qualification</h4>
+
+                    <form class="forms-sample" th:object="${obj}" method="post"
+                          th:action="@{/education/create.jsf}">
+                        <div class="form-group row">
+                            <label for="examName" class="col-sm-3 col-form-label">Exam</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="examName" th:field="*{examName}" required
+                                       placeholder="Enter Exam">
+
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="boardName" class="col-sm-3 col-form-label">Board Name</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="boardName" th:field="*{boardName}" required
+                                       placeholder="Enter Board Name">
+
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="grade" class="col-sm-3 col-form-label">Grade</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="grade" th:field="*{grade}" required
+                                       placeholder="Enter Grade">
+
+                            </div>
+                        </div>
+
+
+
+                        <div class="form-group row">
+                            <label for="passYear" class="col-sm-3 col-form-label">Passing Year</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="passYear" th:field="*{passYear}" required
+                                       placeholder="Enter Passing Year">
+
+                            </div>
+                        </div>
+                        <button class="btn btn-success mr-2 float-right">Submit</button>
+                        <button type="submit" class="btn btn-light mr-2 float-right">Reset</button>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+</div>
+
+</body>
+</html>

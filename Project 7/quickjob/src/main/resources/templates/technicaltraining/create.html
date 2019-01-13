@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{layout2.html}">
+
+<head>
+    <title>Address</title>
+</head>
+<body>
+<div layout:fragment="custom-content">
+    <div class="row">
+
+
+        <div class="col-12 stretch-card">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Post Job</h4>
+
+                    <form class="forms-sample" th:object="${obj}" method="post"
+                          th:action="@{/technical-training/create.jsf}">
+                        <div class="form-group row">
+                            <label for="trainingName" class="col-sm-3 col-form-label">Training Name</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="trainingName" th:field="*{trainingName}"
+                                       required  placeholder="Enter Training Name">
+
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="instituationName" class="col-sm-3 col-form-label">Instituation Name</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="instituationName" th:field="*{instituationName}"
+                                       required  placeholder="Enter Instituation Name">
+
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="startDate" class="col-sm-3 col-form-label">Start Date</label>
+                            <div class="col-sm-9">
+                                <input type="date" class="form-control" id="startDate" th:field="*{startDate}"
+                                       required  placeholder="Enter Start Date">
+
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="endDate" class="col-sm-3 col-form-label">End Date</label>
+                            <div class="col-sm-9">
+                                <input type="date" class="form-control" id="endDate" th:field="*{endDate}"
+                                       required  placeholder="Enter End Date ">
+
+                            </div>
+                        </div>
+
+                        <button class="btn btn-success mr-2 float-right">Submit</button>
+                        <button type="submit" class="btn btn-light mr-2 float-right">Reset</button>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+</div>
+
+</body>
+</html>

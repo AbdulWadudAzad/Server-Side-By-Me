@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{layout2.html}">
+
+<head>
+    <title>Device Info List</title>
+</head>
+<body>
+<div layout:fragment="custom-content">
+    <div class="row">
+        <div class="col-12 grid-margin">
+            <table id="example" class="table table-striped table-bordered dt-responsive nowrap" style="width:100%">
+                <thead>
+                <th>
+                    <th>Job Title</th>
+                    <th>Employment Status</th>
+                    <th>Vacancy</th>
+                    <th>Educational Recquirment</th>
+                    <th>Additional Recquirment</th>
+                    <th>Job Responsibilities</th>
+                    <th>Salary</th>
+                    <th>Compensation & Other Benefit</th>
+                    <th>Published Date</th>
+                    <th>Dead Line</th>
+                    <th>Category Name</th>
+
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="data : ${list}">
+                    <td th:text="${data.jobTitle}">JobPost</td>
+                    <td th:text="${data.employmentStatus}">JobPost</td>
+                    <td th:text="${data.vacancy}">JobPost</td>
+                    <td th:text="${data.eduRecquirment}">JobPost</td>
+                    <td th:text="${data.additionalRecquirment}">JobPost</td>
+                    <td th:text="${data.job_response}">JobPost</td>
+                    <td th:text="${data.salary}">JobPost</td>
+                    <td th:text="${data.compensationOtherBenefit}">JobPost</td>
+                    <td th:text="${#dates.format(data.publishedDate, 'dd-MMM-yyyy')}">JobPost</td>
+                    <td th:text="${#dates.format(data.deadLine, 'dd-MMM-yyyy')}">JobPost</td>
+                    <td th:text="${data.jobCategory.typeName}">JobPost</td>
+                </tr>Address
+
+
+
+                </tbody>
+            </table>
+
+            <table cellspacing="0" cellpadding="0" border="0">
+                <tbody>
+                <tr>
+                    <td class="gutter">
+                        <div class="line number1 index0 alt2" style="display: none;">1</div>
+                    </td>
+                    <td class="code">
+                        <div class="container" style="display: none;">
+                            <div class="line number1 index0 alt2" style="display: none;">&nbsp;</div>
+                        </div>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>

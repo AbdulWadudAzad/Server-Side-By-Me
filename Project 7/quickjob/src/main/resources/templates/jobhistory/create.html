@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{layout2.html}">
+
+<head>
+    <title>Role Create</title>
+</head>
+<body>
+<div layout:fragment="custom-content">
+    <div class="row">
+
+
+        <div class="col-12 stretch-card">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Job History</h4>
+
+                    <form class="forms-sample" th:object="${obj}" method="post"
+                          th:action="@{/job-history/create.jsf}">
+                        <div class="form-group row">
+                            <label for="company" class="col-sm-3 col-form-label">Company Name</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="company" th:field="*{company}" required
+                                       placeholder="Enter Company">
+
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="jobPosition" class="col-sm-3 col-form-label">Position</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="jobPosition" th:field="*{jobPosition}" required
+                                       placeholder="Enter Position">
+
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="salary" class="col-sm-3 col-form-label">Salary</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="salary" th:field="*{salary}" required
+                                       placeholder="Enter Salary">
+
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="yearWork" class="col-sm-3 col-form-label">Year of Experience</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="yearWork" th:field="*{yearWork}" required
+                                       placeholder="Enter Years of experience">
+
+                            </div>
+                        </div>
+                        <button class="btn btn-success mr-2 float-right">Submit</button>
+                        <button type="submit" class="btn btn-light mr-2 float-right">Reset</button>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+</div>
+
+</body>
+</html>

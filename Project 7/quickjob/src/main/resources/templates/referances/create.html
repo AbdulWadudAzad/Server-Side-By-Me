@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{layout2.html}">
+
+<head>
+    <title>Address</title>
+</head>
+<body>
+<div layout:fragment="custom-content">
+    <div class="row">
+
+
+        <div class="col-12 stretch-card">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Add Referance</h4>
+
+                    <form class="forms-sample" th:object="${obj}" method="post"
+                          th:action="@{/referance/create.jsf}">
+                        <div class="form-group row">
+                            <label for="referanceName" class="col-sm-3 col-form-label">Name</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="referanceName" th:field="*{referanceName}"
+                                       required  placeholder="Enter Referance Name">
+
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="company" class="col-sm-3 col-form-label">Company</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="company" th:field="*{company}"
+                                       required  placeholder="Enter Company Name">
+
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="position" class="col-sm-3 col-form-label">Position</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="position" th:field="*{position}"
+                                       required  placeholder="Enter Position">
+
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="email" class="col-sm-3 col-form-label">Email</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="email" th:field="*{email}"
+                                       required  placeholder="Enter Email">
+
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="mobile" class="col-sm-3 col-form-label">Mobile</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="mobile" th:field="*{mobile}"
+                                       required  placeholder="Enter Mobile No">
+
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="address" class="col-sm-3 col-form-label">Office Address</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="address" th:field="*{address}"
+                                       required  placeholder="Enter Office Address">
+
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="relationship" class="col-sm-3 col-form-label">Relationship</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="relationship" th:field="*{relationship}"
+                                       required  placeholder="Enter Relationship">
+
+                            </div>
+                        </div>
+                        <button class="btn btn-success mr-2 float-right">Submit</button>
+                        <button type="submit" class="btn btn-light mr-2 float-right">Reset</button>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+</div>
+
+</body>
+</html>

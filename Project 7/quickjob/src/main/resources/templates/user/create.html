@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{layout2.html}">
+
+<head>
+    <title>Job Post</title>
+</head>
+<body>
+<div layout:fragment="custom-content">
+    <div class="row">
+
+
+        <div class="col-12 stretch-card">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Post Job</h4>
+
+                    <form class="forms-sample" th:object="${user}" method="post"
+                          th:action="@{/user/create.jsf}">
+
+                        <div class="form-group row">
+                            <label for="userName" class="col-sm-3 col-form-label">Role</label>
+                            <div class="col-sm-9">
+                                <select th:field="*{roles}">
+                                    <option th:each="tyyy : ${allRoles}" th:value="${tyyy.id}"><span th:text="${tyyy.rolename}"></span></option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="userName" class="col-sm-3 col-form-label">Username</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="userName" th:field="*{userName}" required
+                                       placeholder="Enter Username">
+
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="password" class="col-sm-3 col-form-label">Password</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="password" th:field="*{password}" required
+                                       placeholder="Enter password">
+
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="firstName" class="col-sm-3 col-form-label">First Name</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="firstName" th:field="*{firstName}" required
+                                       placeholder="Enter First Name">
+
+                            </div>
+                        </div>
+
+
+
+                        <div class="form-group row">
+                            <label for="lastName" class="col-sm-3 col-form-label">Last Name</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="lastName" th:field="*{lastName}" required
+                                       placeholder="Enter Last Name">
+
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="email" class="col-sm-3 col-form-label">Email</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="email" th:field="*{email}" required
+                                       placeholder="Enter Email">
+
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="mobile" class="col-sm-3 col-form-label">Mobile</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="mobile" th:field="*{mobile}" required
+                                       placeholder="Enter Mobile Number">
+
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="joiningDate" class="col-sm-3 col-form-label">Registration Date</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="joiningDate" th:field="*{joiningDate}" required
+                                       placeholder="Enter Registration Date">
+
+                            </div>
+                        </div>
+                        <button class="btn btn-success mr-2 float-right">Submit</button>
+                        <button type="submit" class="btn btn-light mr-2 float-right">Reset</button>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+</div>
+
+</body>
+</html>

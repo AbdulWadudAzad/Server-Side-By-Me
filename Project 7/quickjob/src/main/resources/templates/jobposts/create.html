@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{layout2.html}">
+
+<head>
+    <title>Job Post</title>
+</head>
+<body>
+<div layout:fragment="custom-content">
+    <div class="row">
+
+
+        <div class="col-12 stretch-card">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Post Job</h4>
+
+                    <form class="forms-sample" th:object="${obj}" method="post"
+                          th:action="@{/jobpost/create.jsf}">
+                        <div class="form-group row">
+                            <label for="jobTitle" class="col-sm-3 col-form-label">Company Name</label>
+                            <div class="col-sm-9">
+                                <select th:field="*{user}">
+                                    <option th:each="tyyy : ${userlist}" th:value="${tyyy.id}"><span th:text="${tyyy.firstName}"></span></option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="jobTitle" class="col-sm-3 col-form-label">Job Category</label>
+                            <div class="col-sm-9">
+                                <select th:field="*{jobCategory}">
+                                    <option th:each="nn : ${jobcategorylist}" th:value="${nn.id}"><span th:text="${nn.typeName}"></span></option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="jobTitle" class="col-sm-3 col-form-label">Job Title</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="jobTitle" th:field="*{jobTitle}" required
+                                       placeholder="Enter Address">
+
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="employmentStatus" class="col-sm-3 col-form-label">Employment Status</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="employmentStatus" th:field="*{employmentStatus}" required
+                                       placeholder="Enter Post Code">
+
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="vacancy" class="col-sm-3 col-form-label">Vacancy</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="vacancy" th:field="*{vacancy}" required
+                                       placeholder="Enter Division">
+
+                            </div>
+                        </div>
+
+
+
+                        <div class="form-group row">
+                            <label for="eduRecquirment" class="col-sm-3 col-form-label">Educational Recquirment</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="eduRecquirment" th:field="*{eduRecquirment}" required
+                                       placeholder="Enter Country">
+
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="additionalRecquirment" class="col-sm-3 col-form-label">Additional Recquirment</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="additionalRecquirment" th:field="*{additionalRecquirment}" required
+                                       placeholder="Enter Country">
+
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="job_response" class="col-sm-3 col-form-label">Job Responsibilities</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="job_response" th:field="*{job_response}" required
+                                       placeholder="Enter Country">
+
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="salary" class="col-sm-3 col-form-label">Salary</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="salary" th:field="*{salary}" required
+                                       placeholder="Enter Country">
+
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="compensationOtherBenefit" class="col-sm-3 col-form-label">Compensation & Other Benefit</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="compensationOtherBenefit" th:field="*{compensationOtherBenefit}" required
+                                       placeholder="Enter Country">
+
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="publishedDate" class="col-sm-3 col-form-label">Published Date</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="publishedDate" th:field="*{publishedDate}" required
+                                       placeholder="Enter Country">
+
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="deadLine" class="col-sm-3 col-form-label">Dead Line</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="deadLine" th:field="*{deadLine}" required
+                                       placeholder="Enter Country">
+
+                            </div>
+                        </div>
+                        <button class="btn btn-success mr-2 float-right">Submit</button>
+                        <button type="submit" class="btn btn-light mr-2 float-right">Reset</button>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+</div>
+
+</body>
+</html>
