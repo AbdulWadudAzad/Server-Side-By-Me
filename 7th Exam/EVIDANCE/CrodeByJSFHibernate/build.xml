@@ -7,8 +7,8 @@
 <!-- the Compile on Save feature is turned off for the project. -->
 <!-- You can turn off the Compile on Save (or Deploy on Save) setting -->
 <!-- in the project's Project Properties dialog box.-->
-<project name="crode" default="default" basedir=".">
-    <description>Builds, tests, and runs the project crode.</description>
+<project name="CrodeByJSFHibernate" default="default" basedir=".">
+    <description>Builds, tests, and runs the project CrodeByJSFHibernate.</description>
     <import file="nbproject/build-impl.xml"/>
     <!--
 
